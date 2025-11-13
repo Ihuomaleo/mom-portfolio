@@ -6,21 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dr. Jane Obasi | Portfolio</title>
     
-    <!-- CSS Files -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="css/style.css">
     
-    <!-- FIXED FONT AWESOME LINK: 'integrity' was misspelled -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" xintegrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <link rel="stylesheet" href="css/skins/color-1.css">
-    <link rel="stylesheet" href="css/skins/color-2.css">
-    <link rel="stylesheet" href="css/skins/color-3.css">
-    <link rel="stylesheet" href="css/skins/color-4.css">
-    <link rel="stylesheet" href="css/skins/color-5.css">
-
     <link rel="stylesheet" href="css/style-switcher.css">
 
-    <!-- Visually-hidden class for accessibility -->
     <style>
       .visually-hidden {
         position: absolute;
@@ -35,14 +28,11 @@
     </style>
 </head>
 <body>
-    <!-- Main Container Start -->
     <div class="main-container">
-        <!-- Aside start -->
         <aside class="aside">
             <div class="logo">
                 <a href="#"><span>Dr</span> Jane</a>
             </div>
-            <!-- ACCESSIBILITY: Changed div to button -->
             <button class="nav-toggler" type="button" aria-label="Toggle navigation" aria-controls="aside-nav" aria-expanded="false">
                 <span></span>
             </button>
@@ -54,15 +44,9 @@
                 <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
             </ul>
         </aside>
-        <!-- Aside End -->
-
-        <!-- Main Content Start -->
         <div class="main-content">
-            <!-- ACCESSIBILITY: Added main h1 for screen readers -->
             <h1 class="visually-hidden">Dr. Jane Obasi's Portfolio</h1>
 
-            <!-- Home Section Start -->
-            <!-- REDESIGN: Removed the 'active' class to make it part of the scrolling page -->
             <section class="home section" id="home" role="region" aria-labelledby="home-heading">
                 <div class="container">
                     <div class="row">
@@ -79,9 +63,6 @@
                     </div>
                 </div>
             </section>
-            <!-- Home Section End -->
-
-            <!-- About Section Start -->
             <section class="about section" id="about" role="region" aria-labelledby="about-heading">
                 <div class="container">
                     <div class="row">
@@ -102,7 +83,6 @@
                                     <div class="row">
                                         <div class="info-item padd-15"><p>Birthday : <span>13 Jun 1985</span></p></div>
                                         <div class="info-item padd-15"><p>Age : <span>39</span></p></div>
-                                        <!-- UX IMPROVEMENT: Made website a clickable link -->
                                         <div class="info-item padd-15">
                                             <p>Website : <span><a href="https://www.janeobasi.com" target="_blank" rel="noopener noreferrer">www.janeobasi.com</a></span></p>
                                         </div>
@@ -114,7 +94,6 @@
                                     </div>
                                     <div class="row">
                                         <div class="buttons padd-15">
-                                            <!-- This line points to the PDF in the assets folder -->
                                             <a href="assets/DrJaneObasi_CV.pdf" class="btn" download>Download CV</a>
                                             <a href="#contact" class="btn hire-me">Hire Me</a>
                                         </div>
@@ -201,9 +180,6 @@
                     </div>
                 </div>
             </section>
-            <!-- About Section End -->
-
-            <!-- Services Section Start -->
             <section class="service section" id="services" role="region" aria-labelledby="services-heading">
                 <div class="container">
                     <div class="row">
@@ -255,13 +231,6 @@
                     </div>
                 </div>
             </section>
-            <!-- Services Section End -->
-
-            <!-- 
-              ===================================================================
-              PORTFOLIO SECTION - REDESIGNED WITH CV PUBLICATIONS
-              ===================================================================
-            -->
             <section class="portfolio section" id="portfolio" role="region" aria-labelledby="portfolio-heading">
                 <div class="container">
                     <div class="row">
@@ -272,7 +241,6 @@
                     </div>
                     <div class="row">
 
-                        <!-- Publication Item Start -->
                         <div class="publication-item padd-15">
                             <div class="publication-item-inner shadow-dark">
                                 <h3 class="publication-title">
@@ -287,9 +255,6 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- Publication Item End -->
-
-                        <!-- Publication Item Start -->
                         <div class="publication-item padd-15">
                             <div class="publication-item-inner shadow-dark">
                                 <h3 class="publication-title">
@@ -304,9 +269,6 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- Publication Item End -->
-
-                        <!-- Publication Item Start -->
                         <div class="publication-item padd-15">
                             <div class="publication-item-inner shadow-dark">
                                 <h3 class="publication-title">
@@ -321,12 +283,8 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- Publication Item End -->
-
-                        <!-- Publication Item Start -->
                         <div class="publication-item padd-15">
                             <div class="publication-item-inner shadow-dark">
-                                <!-- BUG FIX: Corrected https typo -->
                                 <h3 class="publication-title">
                                     <a href="https://doi.org/10.53982/agidigbo.2024.1201.03-j" target="_blank" rel="noopener noreferrer">
                                         Semantic Analysis of Selected Nigerian Newspaper Reports on the Effect of the 2023 Naira Redesign
@@ -339,9 +297,6 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- Publication Item End -->
-
-                        <!-- Publication Item Start -->
                         <div class="publication-item padd-15">
                             <div class="publication-item-inner shadow-dark">
                                 <h3 class="publication-title">
@@ -356,9 +311,6 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- Publication Item End -->
-
-                        <!-- Publication Item Start -->
                         <div class="publication-item padd-15">
                             <div class="publication-item-inner shadow-dark">
                                 <h3 class="publication-title">
@@ -373,9 +325,6 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- Publication Item End -->
-
-                        <!-- Publication Item Start -->
                         <div class="publication-item padd-15">
                             <div class="publication-item-inner shadow-dark">
                                 <h3 class="publication-title">
@@ -390,12 +339,8 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- Publication Item End -->
-
-                        <!-- Publication Item Start -->
                         <div class="publication-item padd-15">
                             <div class="publication-item-inner shadow-dark">
-                                <!-- BUG FIX: Corrected https typo -->
                                 <h3 class="publication-title">
                                     <a href="https://doi.org/10.1080/10646175.2023.2212615" target="_blank" rel="noopener noreferrer">
                                         Representation of Power Relations in Twitter Feud between the US and Iranian Politicians
@@ -408,14 +353,9 @@
                                 </p>
                             </div>
                         </div>
-                        <!-- Publication Item End -->
-
-                    </div>
+                        </div>
                 </div>
             </section>
-            <!-- Portfolio Section End -->
-
-            <!-- Contact Section Start -->
             <section class="contact section" id="contact" role="region" aria-labelledby="contact-heading">
                 <div class="container">
                     <div class="row">
@@ -423,6 +363,23 @@
                     </div>
                     <h3 class="contact-title padd-15">Have Any Questions?</h3>
                     <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICE</h4>
+                    
+                    <div class="row">
+                        <div class="contact-social-links padd-15">
+                            <a href="https://scholar.google.com/citations?user=dRYXFMcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar Profile">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </a>
+                            <a href="https://www.researchgate.net/profile/Jane-Obasi" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate Profile">
+                                <i class="fa-brands fa-researchgate"></i>
+                            </a>
+                            <a href="https://orcid.org/0000-0002-4916-7448" target="_blank" rel="noopener noreferrer" aria-label="ORCID Profile">
+                                <i class="fa-brands fa-orcid"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/dr-jane-c-obasi-8b499014" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="contact-info-item padd-15"><div class="icon"><i class="fa fa-phone"></i></div><h4>Call Me On</h4><p>+234 803 750 6017</p></div>
                         <div class="contact-info-item padd-15"><div class="icon"><i class="fa fa-map-marker-alt"></i></div><h4>Office</h4><p>Faculty of Arts, UNN</p></div>
@@ -432,24 +389,18 @@
                     <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
                     <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
                     <div class="row">
-                        <!-- 
-                          NOTE: This form will not send an email by default.
-                          You must use a service like Formspree or Netlify Forms.
-                          Example for Formspree:
-                          <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST" class="contact-form padd-15">
-                        -->
-                        <form class="contact-form padd-15">
+                        <form action="https://formspree.io/f/YOUR_UNIQUE_ID" method="POST" class="contact-form padd-15">
                             <div class="row">
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
                                         <label for="form-name" class="visually-hidden">Name</label>
-                                        <input type="text" class="form-control" id="form-name" placeholder="Name" required>
+                                        <input type="text" class="form-control" id="form-name" name="name" placeholder="Name" required>
                                     </div>
                                 </div>
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
                                         <label for="form-email" class="visually-hidden">Email</label>
-                                        <input type="email" class="form-control" id="form-email" placeholder="Email" required>
+                                        <input type="email" class="form-control" id="form-email" name="email" placeholder="Email" required>
                                     </div>
                                 </div>
                             </div>
@@ -457,7 +408,7 @@
                                 <div class="form-item col-12 padd-15">
                                     <div class="form-group">
                                         <label for="form-subject" class="visually-hidden">Subject</label>
-                                        <input type="text" class="form-control" id="form-subject" placeholder="Subject" required>
+                                        <input type="text" class="form-control" id="form-subject" name="subject" placeholder="Subject" required>
                                     </div>
                                 </div>
                             </div>
@@ -465,7 +416,7 @@
                                 <div class="form-item col-12 padd-15">
                                     <div class="form-group">
                                         <label for="form-message" class="visually-hidden">Message</label>
-                                        <textarea class="form-control" id="form-message" placeholder="Message" required></textarea>
+                                        <textarea class="form-control" id="form-message" name="message" placeholder="Message" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -478,38 +429,26 @@
                     </div>
                 </div>
             </section>
-            <!-- Contact Section End -->
+            </div>
         </div>
-        <!-- Main Content End -->
-    </div>
-    <!-- Main container End -->
-
-    <!-- Style Switcher Start -->
     <div class="style-switcher">
-        <!-- ACCESSIBILITY: Changed div to button -->
         <button class="style-switcher-toggler s-icon" type="button" aria-label="Toggle style switcher">
             <i class="fas fa-cog fa-spin"></i>
         </button>
-        <!-- ACCESSIBILITY: Changed div to button -->
         <button class="day-night s-icon" type="button" aria-label="Toggle dark mode">
             <i class="fas fa-moon"></i>
         </button>
         <h4>Theme Colours</h4>
         <div class="colors">
-            <!-- ACCESSIBILITY: Changed spans to buttons -->
-            <button type="button" class="color-1" aria-label="Set theme color to dark magenta" onclick="setActiveStyle('#8b008b')"></button>
-            <button type="button" class="color-2" aria-label="Set theme color to orange" onclick="setActiveStyle('#ff9720')"></button>
-            <button type="button" class="color-3" aria-label="Set theme color to blue" onclick="setActiveStyle('#274cc6')"></button>
-            <button type="button" class="color-4" aria-label="Set theme color to red" onclick="setActiveStyle('#c21230')"></button>
-            <button type="button" class="color-5" aria-label="Set theme color to teal" onclick="setActiveStyle('#379696')"></button>
+            <button type="button" class="color-1" aria-label="Set theme color to dark magenta" data-color="#8b008b"></button>
+            <button type="button" class="color-2" aria-label="Set theme color to orange" data-color="#ff9720"></button>
+            <button type="button" class="color-3" aria-label="Set theme color to blue" data-color="#274cc6"></button>
+            <button type="button" class="color-4" aria-label="Set theme color to red" data-color="#c21230"></button>
+            <button type="button" class="color-5" aria-label="Set theme color to teal" data-color="#379696"></button>
         </div>
     </div>
-    <!-- Style Switcher End -->
-
-    <!-- JS Files -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
     <script src="js/style-switcher.js"></script>
 </body>
 </html>
-

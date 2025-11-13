@@ -17,9 +17,21 @@ document.addEventListener("click", (event) => {
 });
 
 
-/* Theme Colors
-   ACCESSIBILITY UPDATE:
-   This function now sets a CSS variable (--skin-color)
+/* ===================================================================
+    Theme Colors (UPGRADED)
+    This now reads the 'data-color' attributes from the buttons
+    instead of using 'onclick' in the HTML.
+====================================================================== */
+const colorButtons = document.querySelectorAll(".style-switcher .colors button");
+
+colorButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const color = button.getAttribute("data-color");
+        setActiveStyle(color);
+    });
+});
+
+/* This function sets the CSS variable (--skin-color)
    which is referenced by the main stylesheet.
 */
 function setActiveStyle(color) {
@@ -28,38 +40,51 @@ function setActiveStyle(color) {
 
 
 /* ===================================================================
-    Theme light and dark mode
-    ACCESSIBILITY UPDATE:
-    This now updates the aria-label of the button for screen readers.
+    Theme light and dark mode (UPGRADED WITH LOCALSTORAGE)
+    This now saves the user's choice and checks OS preference.
 ====================================================================== */
 const dayNight = document.querySelector(".day-night");
-dayNight.addEventListener("click", () => {
-    // Toggle icon
-    dayNight.querySelector("i").classList.toggle("fa-sun");
-    dayNight.querySelector("i").classList.toggle("fa-moon");
+const currentTheme = localStorage.getItem("theme");
 
-    // Toggle body class
-    document.body.classList.toggle("dark");
-
-    // ACCESSIBILITY ADDITION: Update aria-label based on new state
-    if (document.body.classList.contains("dark")) {
-        dayNight.setAttribute("aria-label", "Switch to light mode");
-    } else {
-        dayNight.setAttribute("aria-label", "Switch to dark mode");
-    }
-})
-
-// Set initial icon and aria-label on page load
-window.addEventListener("load", () => {
-    if(document.body.classList.contains("dark"))
-    {
+// Function to set the theme
+function setTheme(theme) {
+    if (theme === "dark") {
+        document.body.classList.add("dark");
         dayNight.querySelector("i").classList.add("fa-sun");
+        dayNight.querySelector("i").classList.remove("fa-moon");
         dayNight.setAttribute("aria-label", "Switch to light mode");
-    }
-    else
-    {
+        localStorage.setItem("theme", "dark");
+    } else {
+        document.body.classList.remove("dark");
         dayNight.querySelector("i").classList.add("fa-moon");
+        dayNight.querySelector("i").classList.remove("fa-sun");
         dayNight.setAttribute("aria-label", "Switch to dark mode");
+        localStorage.setItem("theme", "light");
     }
-})
+}
 
+// Toggle theme on click
+dayNight.addEventListener("click", () => {
+    const isDark = document.body.classList.contains("dark");
+    if (isDark) {
+        setTheme("light");
+    } else {
+        setTheme("dark");
+    }
+});
+
+// Set initial theme on page load
+window.addEventListener("load", () => {
+    // 1. Check localStorage first
+    if (currentTheme) {
+        setTheme(currentTheme);
+    } 
+    // 2. If no preference, check their OS preference
+    else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setTheme("dark");
+    }
+    // 3. Default to light
+    else {
+        setTheme("light");
+    }
+});
